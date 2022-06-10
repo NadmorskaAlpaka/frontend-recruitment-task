@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* =================
+        Generic 
+    ================= */
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --text-color: #121212;
+    --button-color: #E4C1AE;
+    --primary-color: #FFFFFF;
+    --black-color: #000000;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+.title{
+    font-size: 42px;
+    color: var(--text-color);
+}
+
+.para{
+    margin: 24px 0 32px 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-color);
+    line-height: 150%;   
+}
+
+.btn{
+    padding: 16px 40px;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 32px;
+}
+
+.btm:focus,
+.btm:active{
+    outline: none;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+/* =================
+      LandingPage
+   ================= */
+
+.landing-page--wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 96px;
+}
+
+.landing-page--wrapper::after{
+    content: "";
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 400ms ease;
+}
+
+.open-modal .landing-page--wrapper::after{
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.landing-page__image--wrapper{
+    max-width: 505px;
+    max-height: 330px;
+}
+
+.landing-page__content--wrapper{
+    max-width: 380px;
+    max-height: 250px;
+    margin-left: 95px;
+    align-self: center;
+}
+
+/* =================
+         Modal
+   ================= */
+.modal{
+    padding: 56px 96px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 920px;
+    min-height: 210px;
+    background-color: var(--primary-color);
+    transition: all 400ms ease;
+}
+
+.open-modal .modal{
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-text{
+    margin: 24px 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.modal__close-icon{
+    position: absolute;
+    top: 46px;
+    right: 46px;
+    border: none;
+    background-color: transparent;
+    color: var(--black-color);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.btn-reset{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    padding: 16px 40px;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 32px;
+}
+
+.visible{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
