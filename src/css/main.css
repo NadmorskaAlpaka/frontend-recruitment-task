@@ -49,11 +49,16 @@ img{
     font-weight: 700;
     border: none;
     border-radius: 32px;
+    cursor: pointer;
+    transition: all 300ms ease;
 }
 
-.btm:focus,
-.btm:active{
-    outline: none;
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.btn:active{
+    transform: scale(0.9);
 }
 
 .bold{
@@ -89,6 +94,7 @@ img{
 }
 
 .landing-page__image--wrapper{
+    display: flex;
     max-width: 505px;
     max-height: 330px;
 }
@@ -152,10 +158,111 @@ img{
     font-weight: 700;
     border: none;
     border-radius: 32px;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.btn-reset:hover{
+    transform: scale(1.1);
+}
+
+.btn-reset:active{
+    transform: scale(0.9);
 }
 
 .visible{
     display: block;
     visibility: visible;
     opacity: 1;
+}
+
+/* =================
+      MediaQueries
+   ================= */
+
+@media (max-width: 1024px) {
+    .container{
+        padding: 0 16px;
+    }
+
+    .title{
+        font-size: 38px;
+    }
+
+    .para{
+        margin: 12px 0 20px 0;
+    }
+
+    .landing-page__content--wrapper{
+        margin-left: 24px;
+    }
+
+    .modal{
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 0 16px;
+    }
+
+    .landing-page--wrapper{
+        flex-direction: column;
+    }
+
+    .title{
+        text-align: center;
+        font-size: 38px;
+    }
+
+    .para{
+        margin: 12px 0 20px 0;
+        text-align: center;
+    }
+
+    .landing-page__image--wrapper{
+        margin: 0 auto;
+    }
+
+    .landing-page__content--wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 24px 0 0 0;
+    }
+
+    .btn{
+        align-self: center;
+    }
+
+    .modal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .modal__close-icon{
+        top: 30px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    .title{
+        font-size: 32px;
+    }
+
+    .modal{
+        width: 90%;
+        padding: 20px;
+    }
+
+    .modal__close-icon{
+        top: 20px;
+        right: 20px;
+    }
 }
