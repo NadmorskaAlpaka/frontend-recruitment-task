@@ -75,24 +75,6 @@ img{
     margin-top: 96px;
 }
 
-.landing-page--wrapper::after{
-    content: "";
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: var(--text-color);
-    opacity: 0;
-    transition: all 400ms ease;
-}
-
-.open-modal .landing-page--wrapper::after{
-    visibility: visible;
-    opacity: 0.5;
-}
-
 .landing-page__image--wrapper{
     display: flex;
     max-width: 505px;
@@ -124,7 +106,7 @@ img{
     transition: all 400ms ease;
 }
 
-.open-modal .modal{
+.open-modal{
     z-index: 1;
     visibility: visible;
     opacity: 1;
@@ -168,6 +150,24 @@ img{
 
 .btn-reset:active{
     transform: scale(0.9);
+}
+
+.modal--background{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 400ms ease;
+}
+
+.modal--background-visible{
+    display: block;
+    visibility: visible;
+    opacity: 0.5;
 }
 
 .visible{
