@@ -32,12 +32,14 @@ window.addEventListener('mouseup', function(event){
     if(event.target != modalHtml && event.target.parentNode != modalHtml){
         modalHtml.classList.remove("open-modal");
         backgroundModalHtml.classList.remove("modal--background-visible");
+        modalTable.classList.remove("visible");
     }
 })
 
 const closeModal = () => {
     modalHtml.classList.remove("open-modal");
     backgroundModalHtml.classList.remove("modal--background-visible");
+    modalTable.classList.remove("visible");
 };
 
 const displayButtonCount = () =>{

@@ -104,11 +104,14 @@ img{
     min-height: 210px;
     background-color: var(--primary-color);
     transition: all 400ms ease;
+    z-index: 100;
 }
 
 .open-modal{
     z-index: 1;
     visibility: visible;
+    display: flex;
+    flex-direction: column;
     opacity: 1;
 }
 
@@ -131,6 +134,7 @@ img{
 
 .btn-reset{
     display: none;
+    align-self: flex-start;
     visibility: hidden;
     opacity: 0;
     padding: 16px 40px;
@@ -176,6 +180,10 @@ img{
     border: 1px solid var(--black-color);
     border-collapse: collapse;
     display: none;
+    max-height: 400px;
+    max-width: 800px;
+    overflow-y: scroll;
+    overflow-x: scroll;
 }
 
 td,th{
@@ -231,7 +239,15 @@ td,th{
     }
 
     .modal{
-        width: 80%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-reset{
+        align-self: center;
     }
 }
 
@@ -269,18 +285,24 @@ td,th{
         align-self: center;
     }
 
+    .modal-table{
+        max-width: 500px;
+    }
+
     .modal{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 24px;
-        text-align: center;
+        padding: 10px;
     }
 
     .modal__close-icon{
         top: 30px;
         right: 30px;
+    }
+}
+
+@media (max-width: 624px ) {
+    .modal-table{
+        max-height: 450px;
+        max-width: 350px;
     }
 }
 
@@ -297,5 +319,12 @@ td,th{
     .modal__close-icon{
         top: 20px;
         right: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .modal{
+        width: 98%;
+        padding: 20px;
     }
 }
